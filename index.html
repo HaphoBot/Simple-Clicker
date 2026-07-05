@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/media/Ellipse 2.svg" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="score">
+        <h1>Score: <span id="score">0</span></h1>
+      </div>
+      <div class="button">
+        <img
+          draggable="false"
+          id="button"
+          src="/media/Ellipse 2.svg"
+          alt="There is button"
+        />
+      </div>
+    </div>
+    <div id="upgrade-for-mobile">UPGRADE</div>
+    <div id="upgrades">
+      <div class="upgrade1" id="upgrade1">
+        <h1>+1 click</h1>
+        <h2>buy for: <span id="value1">50</span></h2>
+      </div>
+      <div class="upgrade2" id="upgrade2">
+        <h1>+ 50% of Power</h1>
+        <h2>buy for: <span id="value2">300</span></h2>
+      </div>
+      <div class="upgrade3" id="upgrade3">
+        <h1>+1 auto clicker</h1>
+        <h2>buy for: <span id="value3">500</span></h2>
+      </div>
+      <div id="remove-upgrades">
+        <h1>Remove</h1>
+      </div>
+    </div>
+    <div id="end"></div>
+    <div id="end-screen">
+      <img
+        src="https://memchik.ru//images/memes/5edb2a16b1c7e374940b816e.jpg"
+        alt=""
+      />
+      <img
+        src="https://i.pinimg.com/originals/b1/30/16/b13016def2cbd80422de187d0ca17605.gif"
+        alt=""
+      />
+      <img
+        src="https://memchik.ru//images/memes/5fe6ca1fb1c7e3624c31b019.jpg"
+        alt=""
+      />
+      <img
+        src="https://i.pinimg.com/originals/de/db/5d/dedb5d11465d975e23a7687cea267d45.gif"
+        alt=""
+      />
+      <div id="close-end-screen">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4225/4225690.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div id="reset-button">
+      <h1>Reset Progress</h1>
+    </div>
+    <div id="stats">
+      <h1>Statistics:</h1>
+      <p>Click Power: <b id="click-power">1</b></p>
+      <p>Auto Click: <b id="auto-click">0</b></p>
+    </div>
+
+    <!-- MUSIC -->
+    <div id="audio-controller">
+      <div id="track-info">Загрузка...</div>
+      <div class="controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <div class="volume-container">
+        <span>🔊</span>
+        <input
+          type="range"
+          id="volume-slider"
+          min="0"
+          max="1"
+          step="0.05"
+          value="0.5"
+        />
+      </div>
+    </div>
+    <audio
+      id="button-sound"
+      src="/audio/button-click-short-ringing-close-dry.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      id="upgrade-sound"
+      src="/audio/knocked-on-a-wooden-surface-once.wav"
+      preload="auto"
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
