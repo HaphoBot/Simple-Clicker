@@ -209,13 +209,11 @@ function woodSound() {
 
 //BOOMBOX
 
-// 1. Массив с музыкой
 const playlist = [
   {
     title: "Core",
     src: "./audio/core.mp3",
   },
-  { title: "First Girl", src: "./audio/first-girl.mp3" },
   {
     title: "Ghost Fight",
     src: "./audio/ghost-fight.mp3",
@@ -238,18 +236,15 @@ const nextBtn = document.getElementById("next-btn");
 const volumeSlider = document.getElementById("volume-slider");
 const trackInfo = document.getElementById("track-info");
 
-// 2. Функция инициализации трека
 function loadTrack(index) {
   const track = playlist[index];
   audio.src = track.src;
   trackInfo.textContent = track.title;
-  audio.volume = volumeSlider.value; // Синхронизируем громкость
+  audio.volume = volumeSlider.value; 
 }
 
-// 3. Логика Воспроизведения / Паузы
 function togglePlay() {
   if (audio.paused) {
-    // Браузеры требуют клика пользователя перед вызовом .play()
     audio
       .play()
       .then(() => (playBtn.textContent = "⏸"))
@@ -262,34 +257,29 @@ function togglePlay() {
   }
 }
 
-// 4. Переключение треков
 function nextTrack() {
-  currentTrackIndex = (currentTrackIndex + 1) % playlist.length; // Зацикливание вперед
+  currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
   loadTrack(currentTrackIndex);
   audio.play().then(() => (playBtn.textContent = "⏸"));
 }
 
 function prevTrack() {
   currentTrackIndex =
-    (currentTrackIndex - 1 + playlist.length) % playlist.length; // Зацикливание назад
+    (currentTrackIndex - 1 + playlist.length) % playlist.length;
   loadTrack(currentTrackIndex);
   audio.play().then(() => (playBtn.textContent = "⏸"));
 }
 
-// 5. Слушатели событий (Event Listeners)
 playBtn.addEventListener("click", togglePlay);
 nextBtn.addEventListener("click", nextTrack);
 prevBtn.addEventListener("click", prevTrack);
 
-// Изменение громкости на лету
 volumeSlider.addEventListener("input", (e) => {
   audio.volume = e.target.value;
 });
 
-// Автоматическое переключение на следующий трек по окончании текущего
 audio.addEventListener("ended", nextTrack);
 
-// Загружаем самую первую песню при старте скрипта
 loadTrack(currentTrackIndex);
 
 //END
