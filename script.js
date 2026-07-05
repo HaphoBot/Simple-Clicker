@@ -1,9 +1,3 @@
-/*
-TO DO:
-Добавить контролер с музыкой. Сделать массив из музыки
-!сделать и под мобилки
-*/
-
 // MAIN
 const scoreCounter = document.getElementById("score");
 const button = document.getElementById("button");
@@ -219,18 +213,18 @@ function woodSound() {
 const playlist = [
   {
     title: "Core",
-    src: "/audio/Undertale_-_Core_(SkySound.cc).mp3",
+    src: "./audio/Core.mp3",
   },
-  { title: "First Girl", src: "/audio/barradeen-first-girl-talking-to-me.mp3" },
+  { title: "First Girl", src: "./audio/first-girl.mp3" },
   {
     title: "Ghost Fight",
-    src: "/audio/toby-fox-undertale-soundtrack-10-ghost-fight.mp3",
+    src: "./audio/ghost-fight.mp3",
   },
-  { title: "Extenz Life", src: "/audio/extenz-life.mp3" },
-  { title: "Asgore", src: "/audio/Undertale_-_Asgore_(SkySound.cc).mp3" },
+  { title: "Extenz Life", src: "./audio/extenz-life.mp3" },
+  { title: "Asgore", src: "./audio/Asgore.mp3" },
   {
     title: "Take My Eyes",
-    src: "/audio/barradeen-i-cant-take-my-eyes-out-of-you.mp3",
+    src: "./audio/take-my-eyes.mp3",
   },
 ];
 
