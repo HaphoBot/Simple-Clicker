@@ -213,7 +213,7 @@ function woodSound() {
 const playlist = [
   {
     title: "Core",
-    src: "./audio/Core.mp3",
+    src: "./audio/core.mp3",
   },
   { title: "First Girl", src: "./audio/first-girl.mp3" },
   {
@@ -221,7 +221,7 @@ const playlist = [
     src: "./audio/ghost-fight.mp3",
   },
   { title: "Extenz Life", src: "./audio/extenz-life.mp3" },
-  { title: "Asgore", src: "./audio/Asgore.mp3" },
+  { title: "Asgore", src: "./audio/asgore.mp3" },
   {
     title: "Take My Eyes",
     src: "./audio/take-my-eyes.mp3",
