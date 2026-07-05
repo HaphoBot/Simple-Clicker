@@ -7,7 +7,7 @@ const closeButton = document.getElementById("close-end-screen");
 const resetButton = document.getElementById("reset-button");
 
 //MUTABLE (изменяемые)
-const finalScore = Number(1);
+const finalScore = Number(100000);
 const coefficient = 2;
 const multiplyCoefficient = 1.5;
 
